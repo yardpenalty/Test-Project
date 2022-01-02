@@ -13,6 +13,8 @@ class ClosureController extends Controller
      */
     public function index()
     {
-        return redirect()->route('dashboard');
+        
+    return view('portal');
+
     }
 }
