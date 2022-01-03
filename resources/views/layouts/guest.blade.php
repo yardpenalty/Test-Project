@@ -21,7 +21,7 @@
                    <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+            @livewire('guest-nav-menu')
 
             <!-- Page Heading -->
             @if (isset($header))
