@@ -17,12 +17,16 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>
-        <div class="font-sans text-gray-900 antialiased guest">
-                   <x-jet-banner />
+        <div class="font-sanfalses text-gray-900 antialiased guest">
+                   <x-jet-banner /
 
         <div class="min-h-screen bg-gray-100">
+		@if(!isset($auth))
             @livewire('guest-nav-menu')
+        @else
+			@livewire('navigation-menu')
 
+		@endif
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white shadow">

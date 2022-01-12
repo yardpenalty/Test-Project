@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/guest', [ClosureController::class, 'index']);
+Route::get('/', [ClosureController::class, 'index']);
 /*
 Route::get('/', function () {
     return view('portal');
 });*/
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->name('admin');
 
 Route::middleware(['auth:sanctum', 'verified'])
     ->namespace('Store')
@@ -33,3 +33,4 @@ Route::namespace('Store')
     ->prefix('sign-in')
     ->name('public.')
     ->group(__DIR__ . '/Store/Location/public.php');
+	
